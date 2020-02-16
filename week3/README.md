@@ -12,8 +12,7 @@
 [http://baidu.com/robots.txt](http://baidu.com/robots.txt)
 可以查看里面有哪些内容不允许爬取。
 
-![robots.txt](https://upload-images.jianshu.io/upload_images/7632302-28872b0071f9108e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![robots.txt](./image/image1.png)
 
 ### 入门技术
 需要事先了解计算机网络（HTTP，Web，URL，URI）等网络知识；
@@ -43,7 +42,7 @@ pip3 install pyquery（可以使用开源镜像安装）
 
 
 4. 对于新闻的正文内容，我们点开查看详细的URL：
-[专家解读：疫情防控“总体战”怎么打？](http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html)可以发现网站的前缀依然是http://politics.people.com.cn/，后缀是我们上图中href中的链接。
+[http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html](http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html)可以发现网站的前缀依然是http://politics.people.com.cn/，后缀是我们上图中href中的链接。
 我们可以对其进行拼接然后跳转到详细信息页面。
 
 5. 现在对我们的新闻内容进行爬取，这里采用ID的形式对页面内容进行查找，对当前页面的id进行记录。
