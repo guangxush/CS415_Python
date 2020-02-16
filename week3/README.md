@@ -15,8 +15,10 @@
 ![robots.txt](./image/image1.png)
 
 ### 入门技术
+
 需要事先了解计算机网络（HTTP，Web，URL，URI）等网络知识；
-了解HMTL中的tag, elements, attribute以及CSS，JavaScript ,DOM,JSON, Chrome浏览器的调试等
+了解HTML中的tag, elements, attribute以及CSS，JavaScript ,DOM,JSON, Chrome浏览器的调试等;
+
 ### 爬虫的一般步骤
 1. 选择数据源，并查看是否允许爬取
 2. 创建爬虫规则
@@ -29,25 +31,25 @@
 这里以pyquery为例，爬取人民网新闻数据：
 
 1. 首先需要安装pyquery
-pip3 install pyquery（可以使用开源镜像安装）
+pip3 install pyquery
 
 2. 打开[人民网时政新闻](http://politics.people.com.cn/)，我们需要爬取该页面的新闻数据。
-![image.png](https://upload-images.jianshu.io/upload_images/7632302-f0cd7e47b9070b63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](./image/image2.png)
 
-3. 使用Chrome浏览器按F12，选取当前新闻的selector并记录
+3. 使用Chrome浏览器按F12，选取当前新闻，并记录下selector
 
-![需要爬取的新闻](https://upload-images.jianshu.io/upload_images/7632302-f69042ea8d9800d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![需要爬取的新闻](./image/image3.png)
 
-![拷贝当前的selector](https://upload-images.jianshu.io/upload_images/7632302-6704aabe762409ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![拷贝当前的selector](./image/image4.png)
 
 4. 对于新闻的正文内容，我们点开查看详细的URL：
-[http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html](http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html)可以发现网站的前缀依然是http://politics.people.com.cn/，后缀是我们上图中href中的链接。
+http://politics.people.com.cn/n1/2020/0212/c1001-31583728.html
+可以发现网站的前缀依然是http://politics.people.com.cn/，后缀是我们上图中href中的链接。
 我们可以对其进行拼接然后跳转到详细信息页面。
 
 5. 现在对我们的新闻内容进行爬取，这里采用ID的形式对页面内容进行查找，对当前页面的id进行记录。
 
-![新闻正文](https://upload-images.jianshu.io/upload_images/7632302-629df72afeda0cd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![新闻正文](./image/image5.png)
 
 6. 现在我们根据元素的id编写爬虫代码进行实验
 ```python
@@ -85,7 +87,10 @@ def handler():
     # 记得关闭文件
     fw.close()
 ```
+
 ### 参考文档
 [pyquery](https://pythonhosted.org/pyquery/)
 
 ### 开源代码
+
+https://github.com/guangxush/CS415_Python/blob/master/week3/Handler.py
